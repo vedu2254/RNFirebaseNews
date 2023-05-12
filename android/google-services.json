@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "782605860487",
+    "project_id": "rnfirebasenews",
+    "storage_bucket": "rnfirebasenews.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782605860487:android:04eb8f3ba138ba0c708222",
+        "android_client_info": {
+          "package_name": "com.quantumitautomation.assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782605860487-b6ggum1stbvp7aap5b22vsridtcrkisd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quantumitautomation.assignment",
+            "certificate_hash": "de40be15d72152d01717ed3235bfd89efb7c76a9"
+          }
+        },
+        {
+          "client_id": "782605860487-0kr0l847tgq2t61imak41avavup3ej1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH96iwYDcSQAV91bl_oLeHDa9IGy6r28E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782605860487-0kr0l847tgq2t61imak41avavup3ej1d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
