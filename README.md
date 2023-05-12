@@ -1,7 +1,7 @@
 # RNFirebaseNews
 Quantum IT Innovation Assignment
 
-Framework: React Native 
+Framework: React Native \n
 Libraries Used:
     "@react-native-firebase/app": For implementing authentication
     "@react-native-google-signin/google-signin": For implementing Google siginIn
