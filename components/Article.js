@@ -1,51 +1,23 @@
 import React from "react";
-// import TimeAgo from './time';
-
-import {View,StyleSheet,Text,Pressable,Image} from "react-native";
-// import { ListItem, Left, Right, Thumbnail, Body, Button } from 'native-base';
-
+import {View,StyleSheet,Text,Linking,Pressable,Image} from "react-native";
 import moment from "moment";
-import * as WebBrowser from 'expo-web-browser';
-
-
 
 const Article = (props) => {
-
     const goToSource = () =>{
-        WebBrowser.openBrowserAsync(props.url);
+        Linking.openURL(props.url);
     }
-
     return(
         <Pressable style={[styles.container, styles.shadowProp ]} onPress={goToSource}>
-            {/* image */}
-           
-
-
-            {/* <View style={{padding: 20}}> */}
-
-
-        {/*    title */}
         <View style={{width: "65%", marginLeft:5,}}>
-            {/* <View style={{marginTop: 10}}>
-                <Text>source: <Text style={styles.source}>{props.sourceName}</Text></Text>
-            </View> */}
             <View style={styles.data}>
-                {/* <Text style={styles.heading}>by: <Text style={styles.author}>{props.author}</Text></Text> */}
                 <Text style={styles.source}>{props.sourceName}</Text>
-
                 <Text style={styles.date}>{moment(props.publishedAt).startOf('day').fromNow()  }</Text>
             </View>
             <Text numberOfLines={2} style={styles.title}>{props.title}</Text>
-
-        {/*    description */}
             <Text style={styles.description} numberOfLines={2}>
                 {props.description}
             </Text>
-
-
-        {/*     source */}
         </View>
-            {/* </View> */}
             <Image source={{
                 uri: props.urlToImage
             }}
