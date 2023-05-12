@@ -6,6 +6,7 @@ Framework: React Native
 Libraries Used:\
     "@react-native-firebase/app": For implementing authentication\
     "@react-native-google-signin/google-signin": For implementing Google siginIn\
+    'react-native-fbsdk-next': For implementing Facebook login\
     "axios": To deal with APIs\
     "moment": To display time elapsed since the news was published\
     "@react-navigation: To navigate between screens and more\
@@ -17,5 +18,7 @@ Libraries Used:\
     'react-native-gesture-handler': To support gestures in navigation\
     
 Preview Video:\
-https://github.com/vedu2254/RNFirebaseNews/assets/75005226/d2a74a72-54b5-4fbe-954a-667630443376
+https://github.com/vedu2254/RNFirebaseNews/assets/75005226/b6be7e7a-6bc0-4a00-acf7-03f1af6e58c9
+
+
 
