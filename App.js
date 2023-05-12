@@ -14,6 +14,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator, DrawerItems } from '@react-navigation/drawer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AppRegistry } from 'react-native-web';
+console.disableYellowBox = true;
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
