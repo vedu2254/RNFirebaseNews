@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RNFirebaseNews</string>
+    <string name="facebook_app_id">1250089435880599</string>
+    <string name="facebook_client_token">ffe8f319d3a5a8b3bc1818285ec729b7</string>
 </resources>

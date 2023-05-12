@@ -13,6 +13,7 @@ import {auth} from './firebase';
 import { useNavigation, NavigationContainer } from '@react-navigation/native'
 import Logo from '../assets/images/Logo_1.png';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { LoginManager, AccessToken } from 'react-native-fbsdk-next';
 import {
   GoogleSignin,
   statusCodes,
@@ -147,6 +148,31 @@ const LoginScreen = () => {
     }
     setLoginPending(false);
   };
+
+  const fbLogin = async() => {
+    try {
+      const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
+
+      if (result.isCancelled) {
+        throw 'User cancelled the login process';
+      }
+    
+      // Once signed in, get the users AccesToken
+      const data = await AccessToken.getCurrentAccessToken();
+    
+      if (!data) {
+        throw 'Something went wrong obtaining access token';
+      }
+    
+      // Create a Firebase credential with the AccessToken
+      const facebookCredential = auth.FacebookAuthProvider.credential(data.accessToken);
+    
+      // Sign-in the user with the credential
+      await auth().signInWithCredential(facebookCredential);
+    }catch(error){
+      console.log(error);
+    }
+  }
   return (
     <>
     <KeyboardAvoidingView style={styles.container} behavior="padding">
@@ -193,6 +219,14 @@ const LoginScreen = () => {
           title="Sign In with Google"
           button
           type="google"
+        />
+        <SocialIcon
+          style={styles.button2}
+          backgroundColor="blue"
+          onPress={fbLogin}
+          title="Sign In with Facebook"
+          button
+          type="facebook"
         />
         <TouchableOpacity
           onPress={() => {
@@ -269,9 +303,16 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   button1: {
-    backgroundColor: 'red',
+    backgroundColor: '#DB4437',
     width: '100%',
     padding: 15,
+    borderRadius: 25,
+    alignItems: 'center',
+  },
+  button2: {
+    backgroundColor: '#4267B2',
+    width: '100%',
+    padding: 5,
     borderRadius: 25,
     alignItems: 'center',
   },
